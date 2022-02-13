@@ -50,10 +50,13 @@ class PollenPrognoseCard  extends LitElement {
       <div class="flex-container">
         ${this.sensors.map(sensor => html`
         <div class="sensor">
-          <p class="box">${sensor.allergen}</p>
-          <img class="box" src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${sensor.forecast.state == "unknown" || sensor.forecast.state == "unavailable" ? 0 : sensor.forecast.state}.svg"/>
+          <p>${sensor.allergen}</p>
+          <img src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.state ? 0 : sensor.forecast.state}.svg"/>
+          ${this.config.forecast == true
+          ? html`<img class="forecast" src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.attributes.state_tomorrow ? 0 : sensor.forecast.attributes.state_tomorrow}.svg"/>`
+          : ""}
           ${this.config.show_state == true || this.config.show_state == null
-            ? html`<p class="box">${sensor.forecast.state == "unknown" ? sensor.forecast.state : sensor.forecast.attributes.state_today_desc}</p>`
+            ? html`<p>${sensor.forecast.state == "unknown" ? sensor.forecast.state : sensor.forecast.attributes.state_today_desc}</p>`
             : ""}
         </div>
       `)}
@@ -75,11 +78,6 @@ class PollenPrognoseCard  extends LitElement {
       line-height: 40px;
       color: var(--primary-text-color);
       padding: 4px 0 12px;
-    }
-    .forecast {
-      width: 100%;
-      padding: 7px;
-      height: 100%;
     }
     td {
       padding: 3px;
@@ -109,6 +107,9 @@ class PollenPrognoseCard  extends LitElement {
     }
     img {
       max-height: 50px;
+    }
+    .forecast {
+      max-height: 25px;
     }
     .sensor {
       display: block;

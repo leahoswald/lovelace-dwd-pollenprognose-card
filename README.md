@@ -75,6 +75,7 @@ views:
 | allergens | list | **Required** | List of allergens for which you have sensors
 | title | boolean | **Optional** | Set to `false` to remove the heading from the card
 | show_state | boolean | **Optional** | Set to `false` if you don't want to show the state text under the images.
+| forecast | boolean | **Optional** | Set to `true` to see the forecast for tomorrow indicated with an additional smaller leaf.
 
 ### Example of the card with all allergens presented
 ![2021-04-23 14_24_23-Admin - Home Assistant](https://user-images.githubusercontent.com/22006797/115870566-b4e91080-a43f-11eb-843e-1f5efbcc2a84.png)
