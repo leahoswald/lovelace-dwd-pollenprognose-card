@@ -78,6 +78,7 @@ views:
 | forecast | boolean | **Optional** | Set to `true` to see the forecast for tomorrow indicated with an additional smaller leaf.
 
 ### Example of the card with all allergens presented
-![2021-04-23 14_24_23-Admin - Home Assistant](https://user-images.githubusercontent.com/22006797/115870566-b4e91080-a43f-11eb-843e-1f5efbcc2a84.png)
+![Screenshot2022-02-13_17-16-48](https://user-images.githubusercontent.com/1292551/153762269-214888ae-d2bb-445b-a90a-f4336cd303e1.png)
+
 
 
