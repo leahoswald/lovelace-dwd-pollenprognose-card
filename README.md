@@ -1,5 +1,5 @@
 # pollenprognose-card
-A Lovelace custom card for [custom component DWD Pollenflug](https://github.com/mampfes/hacs_dwd_pollenflug) in Home Assistant based on the great work of @isabellaalstrom [pollenprognos-card](https://github.com/isabellaalstrom/lovelace-pollenprognos-card) and @TekniskSupport.
+A Lovelace custom card for [custom component DWD Pollenflug](https://github.com/mampfes/hacs_dwd_pollenflug) in Home Assistant based on the great work of [@isabellaalstrom](https://github.com/isabellaalstrom/) [pollenprognos-card](https://github.com/isabellaalstrom/lovelace-pollenprognos-card) and [@TekniskSupport](https://github.com/TekniskSupport).
 
 <b>You need to manually move the folder `pollen_img` directly inside your `www` folder for the images to appear.</b>
 
