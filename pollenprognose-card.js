@@ -153,11 +153,6 @@ class PollenPrognoseCard  extends LitElement {
         continue;
 
       dict.forecast = hass.states[`sensor.pollenflug_${allergen}_${region_id}`]
-      if (dict.forecast.state == "unknown") {
-        if (dict.forecast === undefined) continue;
-        // var log_text = `A sensor for "${dict.allergen}" is returning unknown, you should probably check your config for that sensor in the custom component.`;
-        // console.log(log_text)
-      }
 
       sensors.push(dict)
     }
