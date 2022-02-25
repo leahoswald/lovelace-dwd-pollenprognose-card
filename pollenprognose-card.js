@@ -51,9 +51,9 @@ class PollenPrognoseCard  extends LitElement {
         ${this.sensors.map(sensor => html`
         <div class="sensor">
           <p>${sensor.allergen}</p>
-          <img src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.state ? 0 : sensor.forecast.state}.svg"/>
+          <img title="${sensor.forecast.attributes.state_today_desc}" src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.state ? 0 : sensor.forecast.state}.svg"/>
           ${this.config.forecast == true
-          ? html`<img class="forecast" src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.attributes.state_tomorrow ? 0 : sensor.forecast.attributes.state_tomorrow}.svg"/>`
+          ? html`<img class="forecast" title="${sensor.forecast.attributes.state_tomorrow_desc}" src="/local/pollen_img/${sensor.allergen.toLowerCase()}_${!sensor.forecast.attributes.state_tomorrow ? 0 : sensor.forecast.attributes.state_tomorrow}.svg"/>`
           : ""}
           ${this.config.show_state == true || this.config.show_state == null
             ? html`<p>${sensor.forecast.state == "unknown" ? sensor.forecast.state : sensor.forecast.attributes.state_today_desc}</p>`
