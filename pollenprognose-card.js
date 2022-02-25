@@ -149,6 +149,9 @@ class PollenPrognoseCard  extends LitElement {
       dict.allergen = (allergens[i].charAt(0).toUpperCase() + allergens[i].slice(1));
       var allergen = allergens[i].replace(' / ', '_').toLowerCase();
 
+      if ((this.config.filter_unknown == null || this.config.filter_unknown == true) && hass.states[`sensor.pollenflug_${allergen}_${region_id}`].state == 0)
+        continue;
+
       dict.forecast = hass.states[`sensor.pollenflug_${allergen}_${region_id}`]
       if (dict.forecast.state == "unknown") {
         if (dict.forecast === undefined) continue;

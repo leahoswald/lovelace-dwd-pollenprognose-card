@@ -76,6 +76,7 @@ views:
 | title | boolean | **Optional** | Set to `false` to remove the heading from the card
 | show_state | boolean | **Optional** | Set to `false` if you don't want to show the state text under the images.
 | forecast | boolean | **Optional** | Set to `true` to see the forecast for tomorrow indicated with an additional smaller leaf.
+| filter_unknown | boolean | **Optional** | Set to `true` to only see actually active pollen.
 
 ### Example of the card with all allergens presented
 ![Screenshot2022-02-13_17-16-48](https://user-images.githubusercontent.com/1292551/153762269-214888ae-d2bb-445b-a90a-f4336cd303e1.png)
